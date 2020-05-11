@@ -1,4 +1,4 @@
-import { addPost } from './postActions';
+import { addPost, deletePost } from './postActions';
  
 describe('posts actions', () => {
 

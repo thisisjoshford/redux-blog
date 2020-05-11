@@ -6,3 +6,10 @@ export const addPost = (title, body) => ({
   }
 });
 
+export const deletePost = title => ({
+  type: 'DELETE_POST',
+  payload: {
+    title
+  }
+});
+
