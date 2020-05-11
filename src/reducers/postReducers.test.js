@@ -1,12 +1,11 @@
 import { addPost, deletePost, updatePost } from '../actions/postActions';
 
-describe('dogs reducer', () => {
+import reducer from './postReducers';
+
+describe('blog post reducer', () => {
   it('handles the add post action', () => {
     const state = [];
-    const addedPost = addPost({
-      title: 'Blog Post Uno',
-      body: 'blog post body texty text...'
-    });
+    const addedPost = addPost('Blog Post Uno', 'blog post body texty text...');
 
     const newState = reducer(state, addedPost);
 
