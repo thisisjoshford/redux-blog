@@ -1,3 +1,5 @@
+import { postBlog } from './postActions';
+ 
 describe('posts actions', () => {
 
   it('posts a blog post', () => {
