@@ -25,5 +25,18 @@ describe('posts actions', () => {
     });
   });
 
+  it('updates a blog post', () => {
+    const updatedPost = updatePost('Title of Blog Post Uno', 'new text yo...');
+
+    expect(updatedPost).toEqual({
+      type: 'UPDATE_POST',
+      payload: {
+        title: 'Title of Blog Post Uno',
+        body: 'new text yo'
+      }
+    });
+  });
+
+
 
 });
