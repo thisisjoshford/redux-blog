@@ -13,3 +13,10 @@ export const deletePost = title => ({
   }
 });
 
+export const updatePost = (title, body) => ({
+  type: 'UPDATE_POST',
+  payload: {
+    title,
+    body
+  }
+});

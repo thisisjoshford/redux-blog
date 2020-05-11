@@ -1,4 +1,4 @@
-import { addPost, deletePost } from './postActions';
+import { addPost, deletePost, updatePost } from './postActions';
  
 describe('posts actions', () => {
 
@@ -26,17 +26,15 @@ describe('posts actions', () => {
   });
 
   it('updates a blog post', () => {
+    const blogPost = addPost('Title of Blog Post Uno', 'The body of this sweet blog...');
     const updatedPost = updatePost('Title of Blog Post Uno', 'new text yo...');
 
     expect(updatedPost).toEqual({
       type: 'UPDATE_POST',
       payload: {
         title: 'Title of Blog Post Uno',
-        body: 'new text yo'
+        body: 'new text yo...'
       }
     });
   });
-
-
-
 });
