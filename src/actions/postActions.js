@@ -1,7 +1,8 @@
-export const postBlog = (title, body) => ({
-  type: 'ADD_BLOG_POST',
+export const addPost = (title, body) => ({
+  type: 'POST',
   payload: {
     title,
     body
   }
 });
+
