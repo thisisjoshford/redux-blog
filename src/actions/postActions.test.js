@@ -25,6 +25,7 @@ describe('posts actions', () => {
     });
   });
 
+  //needs to be redone... function that will 
   it('updates a blog post', () => {
     const blogPost = addPost('Title of Blog Post Uno', 'The body of this sweet blog...');
     const updatedPost = updatePost('Title of Blog Post Uno', 'new text yo...');

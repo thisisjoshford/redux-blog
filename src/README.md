@@ -3,9 +3,9 @@
 ## Blog Action
 
 [] - create `src/actions/postActions.js`
-  [] - posts have an title and body
-  [] - create a post
-  [] - delete a post
+  [x] - posts have an title and body
+  [x] - create a post
+  [x] - delete a post
   [] - BONUS: you can update a post by passing an id and new body
 
 ## Blog Reducers
