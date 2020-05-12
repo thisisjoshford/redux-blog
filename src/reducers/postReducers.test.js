@@ -39,4 +39,28 @@ describe('blog post reducer', () => {
       }
     ]);
   });
+
+  it('deletes a post', () => {
+    const state = [
+      {
+        title: 'Blog Post Uno',
+        body: 'blog post body texty text...'
+      },
+      {
+        title: 'Blog Post Dos',
+        body: 'second super cool text...'
+      }
+    ];
+
+    const deleteFirstPost = deletePost('Blog Post Uno');
+
+    const newState = reducer(state, deleteFirstPost);
+
+    expect(newState).toEqual([
+      {
+        title: 'Blog Post Dos',
+        body: 'second super cool text...'
+      }
+    ]);
+  });
 });
