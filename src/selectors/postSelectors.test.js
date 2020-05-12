@@ -14,7 +14,6 @@ describe('post selectors', () => {
     ];
 
     const posts = getAllPosts(state);
-    
     expect(posts).toEqual(state);
   }
   );
