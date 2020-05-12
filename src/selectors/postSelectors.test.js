@@ -1,4 +1,4 @@
-import { getAllPosts } from './postSelectors';
+import { getAllPosts, getPostByIndex } from './postSelectors';
 
 const state = [
   {
@@ -15,5 +15,10 @@ describe('post selectors', () => {
   it('gets all blog posts', () => {
     const posts = getAllPosts(state);
     expect(posts).toEqual(state);
+  });
+
+  it('gets a post by index', () => {
+    const post = getPostByIndex(0);
+    expect(post).toEqual(state[0]);
   });
 });
