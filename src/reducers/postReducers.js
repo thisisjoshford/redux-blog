@@ -7,7 +7,15 @@ export default function reducer(state = initialState, action) {
     case 'POSTS_ARRAY':
       return [...state, action.payload].flat(Infinity);
     case 'UPDATE_POST':
-      return state.find[action.payload.title];
+      return state.map((post) => {
+        if(post.title === action.payload.title) {
+          return { 
+            title: post.title,
+            body: action.payload.body
+          }; 
+        }
+        return post;
+      });
     case 'DELETE_POST':
       return state
         .filter(post => 

@@ -81,4 +81,30 @@ describe('blog post reducer', () => {
 
     expect(newState).toEqual(newPosts);
   });
+
+  it('updates a post by id/title', () => {
+    const state = [ 
+      {
+        title: 'Blog Post Uno',
+        body: 'blog post body texty text...'
+      },
+      {
+        title: 'Blog Post Dos',
+        body: 'second super cool text...'
+      }
+    ];
+    const updatedPost = updatePost('Blog Post Uno', 'new text');
+
+    const newState = reducer(state, updatedPost);
+    expect(newState).toEqual([ 
+      {
+        title: 'Blog Post Uno',
+        body: 'new text'
+      },
+      {
+        title: 'Blog Post Dos',
+        body: 'second super cool text...'
+      }
+    ]);
+  });
 });
