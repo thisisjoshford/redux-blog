@@ -17,19 +17,26 @@ describe('blog post reducer', () => {
     ]);
   });
 
-  it('handles the delete ', () => {
+  it('adds a second post to state', () => {
     const state = [
       {
         title: 'Blog Post Uno',
         body: 'blog post body texty text...'
       }
     ];
+    const secondPost = addPost('Blog Post Dos', 'second super cool text...');
 
-    const deletedPost = deletePost('Blog Post Uno');
+    const newState = reducer(state, secondPost);
 
-    const newState = reducer(state, deletedPost);
-
-    expect(newState).toEqual([]);
-
+    expect(newState).toEqual([
+      {
+        title: 'Blog Post Uno',
+        body: 'blog post body texty text...'
+      },
+      {
+        title: 'Blog Post Dos',
+        body: 'second super cool text...'
+      }
+    ]);
   });
 });
