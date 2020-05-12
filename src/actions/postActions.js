@@ -20,3 +20,4 @@ export const updatePost = (title, body) => ({
     body
   }
 });
+
