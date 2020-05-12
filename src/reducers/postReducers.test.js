@@ -63,4 +63,22 @@ describe('blog post reducer', () => {
       }
     ]);
   });
+
+  it('stores an array of posts', () => {
+    const state = [];
+    const newPosts = [
+      {
+        title: 'Blog Post Uno',
+        body: 'blog post body texty text...'
+      },
+      {
+        title: 'Blog Post Dos',
+        body: 'second super cool text...'
+      }];
+
+    const postsToAdd = addPostArr(newPosts);
+    const newState = reducer(state, postsToAdd);
+
+    expect(newState).toEqual(newPosts);
+  });
 });
