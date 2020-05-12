@@ -18,7 +18,7 @@ describe('post selectors', () => {
   });
 
   it('gets a post by index', () => {
-    const post = getPostByIndex(0);
+    const post = getPostByIndex(state, 0);
     expect(post).toEqual(state[0]);
   });
 });
