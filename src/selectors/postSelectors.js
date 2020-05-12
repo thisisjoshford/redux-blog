@@ -1,2 +1,2 @@
-export const getAllPosts = state => (state);
+export const getAllPosts = state => state;
 
