@@ -5,7 +5,10 @@ export default function reducer(state = initialState, action) {
     case 'POST':
       return [...state, action.payload];
     case 'DELETE_POST':
-      return state.filter((_, i) => i !== action.payload);
+      return state
+        .filter(post => 
+          post.title !== action.payload.title
+        );
     default:
       return state;
   }
