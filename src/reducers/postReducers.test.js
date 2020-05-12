@@ -1,4 +1,4 @@
-import { addPost, deletePost, updatePost } from '../actions/postActions';
+import { addPost, deletePost, updatePost, addPostArr } from '../actions/postActions';
 
 import reducer from './postReducers';
 

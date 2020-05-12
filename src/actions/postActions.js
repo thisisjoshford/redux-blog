@@ -21,3 +21,8 @@ export const updatePost = (title, body) => ({
   }
 });
 
+export const addPostArr = (postArray) => ({
+  type: 'POSTS_ARRAY',
+  payload: postArray
+});
+
