@@ -16,4 +16,20 @@ describe('blog post reducer', () => {
       }
     ]);
   });
+
+  it('handles the delete ', () => {
+    const state = [
+      {
+        title: 'Blog Post Uno',
+        body: 'blog post body texty text...'
+      }
+    ];
+
+    const deletedPost = deletePost('Blog Post Uno');
+
+    const newState = reducer(state, deletedPost);
+
+    expect(newState).toEqual([]);
+
+  });
 });
